@@ -59,7 +59,7 @@ Wildcards are special characters used to perform operations on groups of files a
 
 ## Pipes and Filters
 
-` wc ` is the ‘word count’ command: it counts the number of lines, words, and characters in files (returning the values in that order from left to right). If we run the command ` wc *.pdb `, the ` * ` in ` *.pdb ` matches zero or more characters, so the shell turns ` *.pdb ` into a list of all ` .pdb ` files in the current directory:
+`wc` is the ‘word count’ command: it counts the number of lines, words, and characters in files (returning the values in that order from left to right). If we run the command ` wc *.pdb `, the `*` in `*.pdb` matches zero or more characters, so the shell turns ` *.pdb ` into a list of all `.pdb ` files in the current directory:
 
 ` wc *.pdb ` also shows the total number of all lines in the last line of the output.
 
@@ -108,7 +108,7 @@ what does ` >> ` mean? <br>
 
 ## Passing output to another command
 
- In our example of finding the file with the fewest lines, we are using two intermediate files `lengths.txt` and `sorted-lengths.txt` to store output. This is a confusing way to work because even once you understand what `wc`, `sort`, and `head` do, those intermediate files make it hard to follow what’s going on. We can make it easier to understand by running `sort` and `head` together:
+In our example of finding the file with the fewest lines, we are using two intermediate files `lengths.txt` `sorted-lengths.txt` to store output. This is a confusing way to work because even once you understand what `wc`, `sort`, and `head` do, those intermediate files make it hard to follow what’s going on. We can make it easier to understand by running `sort` and `head` together:
 ```
 $ sort -n lengths.txt | head -n 1
 ```
