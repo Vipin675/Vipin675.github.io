@@ -52,16 +52,14 @@ The part of the operating system responsible for managing files and directories 
 
 Wildcards are special characters used to perform operations on groups of files and directories that match a specific pattern.
 
-* ``` * ``` (asterisk): matches any sequence of characters, including zero characters. For example, ` *.txt ` matches all files with the ` .txt ` extension in the current directory, while ` file* ` matches all files in the current directory that start with ` file `.
+* ` * ` (asterisk): matches any sequence of characters, including zero characters. For example, ` *.txt ` matches all files with the `*.txt` extension in the current directory, while ` file* ` matches all files in the current directory that start with `file`.
 
-* `  ?  ` (question mark): matches any single character. For example, 
-  ` file?.txt ` matches all files in the current directory with a name like 
- ` file1.txt `, ` file2.txt `, etc.
+* `  ?  ` (question mark): matches any single character. For example, ` file?.txt ` matches all files in the current directory with a name like ` file1.txt `, ` file2.txt `, etc.
 
 
 ## Pipes and Filters
 
- ` wc ` is the ‘word count’ command: it counts the number of lines, words, and characters in files (returning the values in that order from left to right). If we run the command ` wc *.pdb `, the ` * ` in ` *.pdb ` matches zero or more characters, so the shell turns ` *.pdb ` into a list of all ` .pdb ` files in the current directory:
+` wc ` is the ‘word count’ command: it counts the number of lines, words, and characters in files (returning the values in that order from left to right). If we run the command ` wc *.pdb `, the ` * ` in ` *.pdb ` matches zero or more characters, so the shell turns ` *.pdb ` into a list of all ` .pdb ` files in the current directory:
 
 ` wc *.pdb ` also shows the total number of all lines in the last line of the output.
 
