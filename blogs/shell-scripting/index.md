@@ -210,3 +210,70 @@ for filename in "red dragon.dat" "purple unicorn.dat"
 > done
 ```
 
+## Shell Scripts
+
+We are finally ready to see what makes the shell such a powerful programming environment. We are going to take the commands we repeat frequently and save them in files so that we can re-run all those operations again later by typing a single command. For historical reasons, a bunch of commands saved in a file is usually called a shell script, but make no mistake — these are actually small programs.
+
+Not only will writing shell scripts make your work faster, but also you won’t have to retype the same commands over and over again. It will also make it more accurate (fewer chances for typos) and more reproducible. If you come back to your work later (or if someone else finds your work and wants to build on it), you will be able to reproduce the same results simply by running your script, rather than having to remember or retype a long list of commands.
+
+Let we have a `proteins` folder that contains :
+
+```bash
+$ ls
+alkanes.pdb  cubane.pdb  methane.pdb  pentane.pdb
+```
+
+Creating a new file, `middle.sh` which will become our shell script:
+
+```bash
+nano middle.sh
+```
+
+The command `nano middle.sh` opens the file `middle.sh` within the text editor ‘nano’ (which runs within the shell). If the file does not exist, it will be created. We can use the text editor to directly edit the file — we’ll simply insert the following line:
+
+```bash
+head -n 15 octane.pdb | tail -n 5
+```
+
+Then we save the file (`Ctrl-O` in nano) and exit the text editor (`Ctrl-X` in nano). Check that the directory proteins now contains a file called `middle.sh`.
+
+Once we have saved the file, we can ask the shell to execute the commands it contains. Our shell is called `bash`, so we run the following command:
+
+```bash
+bash middle.sh
+```
+
+What if we want to select lines from an arbitrary file? We could edit `middle.sh` each time to change the filename, but that would probably take longer than typing the command out again in the shell and executing it with a new file name. Instead, let’s edit `middle.sh` and make it more versatile:
+
+```bash
+nano middle.sh
+```
+
+Now, within “nano”, replace the text `octane.pdb` with the special variable called `$1`:
+
+```text
+head -n 15 "$1" | tail -n 5
+```
+
+Inside a shell script, `$1` means ‘the first filename (or other argument) on the command line’. We can now run our script like this:
+
+`bash middle.sh octane.pdb` - `$1` will replace with `octane.pdb`
+
+`bash middle.sh octane.pdb` - `$1` will replace with `pentane.pdb`
+
+## Double-Quotes Around Arguments
+
+```bash
+nano middle.sh
+```
+
+```text
+head -n "$2" "$1" | tail -n "$3"
+```
+
+We can now run:
+
+```bash
+bash middle.sh pentane.pdb 15 5
+```
+
