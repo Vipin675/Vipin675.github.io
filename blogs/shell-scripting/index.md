@@ -277,3 +277,147 @@ We can now run:
 bash middle.sh pentane.pdb 15 5
 ```
 
+## Finding Things
+
+`grep` finds and prints lines in files that match a pattern.
+
+```bash
+cat haiku.txt
+```
+
+Output
+
+```text
+The Tao that is seen
+Is not the true Tao, until
+You bring fresh toner.
+
+With searching comes loss
+and the presence of absence:
+"My Thesis" not found.
+
+Yesterday it worked
+Today it is not working
+Software is like that.
+```
+
+Let’s find lines that contain the word ‘not’:
+
+```bash
+grep not haiku.txt
+```
+
+output
+
+```text
+Is not the true Tao, until
+"My Thesis" not found.
+Today it is not working
+```
+
+The output is the three lines in the file that contain the letters ‘not’.
+
+Let’s search for the pattern: ‘The’.
+
+```bash
+grep The haiku.txt
+```
+
+output
+
+```text
+The Tao that is seen
+"My Thesis" not found.
+```
+
+This time, two lines that include the letters ‘The’ are outputted, one of which contained our search pattern within a larger word, ‘Thesis’.
+
+To restrict matches to lines containing the word ‘The’ on its own, we can give `grep` the `-w` option. This will limit matches to word boundaries.
+
+Later in this lesson, we will also see how we can change the search behavior of grep with respect to its case sensitivity.
+
+```bash
+grep -w The haiku.txt
+```
+
+output
+
+```text
+The Tao that is seen
+```
+
+If we want to search part of a sentence containing space
+
+```bash
+grep -w "is not" haiku.txt
+```
+
+output
+
+```text
+Today it is not working
+```
+
+Another useful option is -n, which numbers the lines that match:
+
+```bash
+grep -n "it" haiku.txt
+```
+
+output
+
+```text
+5:With searching comes loss
+9:Yesterday it worked
+10:Today it is not working
+```
+
+Now we want to use the option -i to make our search case-insensitive:
+
+```bash
+grep -n -w -i "the" haiku.txt
+```
+
+output
+
+```text
+1:The Tao that is seen
+2:Is not the true Tao, until
+6:and the presence of absence:
+```
+
+Now, we want to use the option -v to invert our search, i.e., we want to output the lines that do not contain the word ‘the’.
+
+```bash
+grep -n -w -v "the" haiku.txt
+```
+
+output
+
+```text
+1:The Tao that is seen
+3:You bring fresh toner.
+4:
+5:With searching comes loss
+7:"My Thesis" not found.
+8:
+9:Yesterday it worked
+10:Today it is not working
+11:Software is like that.
+```
+
+more about `grep`?
+
+```bash
+grep --help
+```
+
+While `grep` finds lines in files, the `find` command finds files themselves.
+
+`find .` - searches for all files and directories in the current directory and its subdirectories.
+
+`find . -type d` - searches for all directories in the current directory and its subdirectories.
+
+`find . -type f` - searches for all files in the current directory and its subdirectories.
+
+`man [command]` - The `man` command in the command line is used to display the manual pages for a specific command or topic. It provides a detailed description of the command or topic, including its syntax, options, and usage examples.
