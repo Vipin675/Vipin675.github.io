@@ -4,10 +4,6 @@
 
 A command shell, also known as a command-line interface or CLI, is a program designed to take commands typed in by the user and execute them. It is an interface that allows a user to interact with a computer's operating system using text commands.
 
-The shell’s main advantages are its high action-to-keystroke ratio, its support for automating repetitive tasks, and its capacity to access networked machines.
-
-The shell’s main disadvantages are its primarily textual nature and how cryptic its commands and operation can be.
-
 ## Navigating Files and Directories
 
 The part of the operating system responsible for managing files and directories is called the file system. It organizes our data into files, which hold information, and directories (also called ‘folders’), which hold files or other directories.
