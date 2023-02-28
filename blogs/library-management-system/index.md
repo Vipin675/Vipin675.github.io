@@ -253,6 +253,8 @@ If you notice, the layout of fields in the form is according to how you ordered 
 
 ` https://frappe.school/courses/frappe-framework-tutorial/learn/6.3 `
 
+I do find biolerplate code for library_member, library_membership docType which I created later on.
+
 ---
 
 ## Doctype Features
@@ -360,3 +362,14 @@ Let's create another doctype: **Library Membership**. It will have the following
 - Paid (Check)
 
 It will have Is Submittable enabled. It will have Naming set as LMS.##### and restricted to Librarian role. Also, the Title Field should be set to full_name in the View Settings section.
+
+
+The Link field Library Member is similar to a Foreign Key column in other frameworks. It will let you link the value to a record in another DocType. In this case, it links to a record of Library Member DocType.
+
+```text
+!! DON'T FORGET TO SAVE THE doctype before setting up the following
+```
+
+The Full Name field is a Read Only field that will be automatically fetched from from the full_name field in the linked record Library Member.
+
+![ss](./assets/lm_ss.png)
