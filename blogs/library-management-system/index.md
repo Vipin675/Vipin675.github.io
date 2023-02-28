@@ -651,5 +651,11 @@ frappe.ui.form.on('Library Member', {
 
 Now, refresh your page and go to the Library Member form. You should see two buttons on the top right. Click on them to try them out. They will automatically set the Library Member in each of those documents making the process easier.
 
+![form_script](./assets/form_script.png)
+
 We have only scratched the surface here. You can do a lot more with Form Scripts. Learn more about the API at [Form Scripts API](https://frappeframework.com/docs/v14/user/en/api/form).
+
+---
+
+## Portal Pages
 
