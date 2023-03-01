@@ -659,3 +659,14 @@ We have only scratched the surface here. You can do a lot more with Form Scripts
 
 ## Portal Pages
 
+Portal pages are server rendered pages for your website visitors.
+
+We have been exclusively working with the Desk which is the admin interface accessible by System Users. Usually you will want to give limited access to your customers. In our case, we want Library Members to be able to view available Articles that they can issue from our website. Portal Pages can help us achieve that.
+
+Go to Article doctype, and scroll down to the Web View section.
+
+- Enable Has Web View and Allow Guest to View
+- Enter articles in the Route field
+- Add a field named Route in the fields table
+- Click on Save
+
