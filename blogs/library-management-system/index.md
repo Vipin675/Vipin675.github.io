@@ -126,8 +126,6 @@ To create DocTypes in our app, we must log in to Desk. Go to ` http://library.te
 
 Enter Administrator as the user and password that you set while creating the site.
 
-![successful_login](./assets/Successful_login.png)
-
 After successful login, you will see the setup wizard. This is a one-time setup wizard used to set up the site. Go ahead, select your country and complete the wizard.
 
 You should see the Desk that looks something like this:
@@ -255,11 +253,13 @@ If you notice, the layout of fields in the form is according to how you ordered 
 
 I do find biolerplate code for library_member, library_membership docType which I created later on.
 
+Also later I realise that the custom option was enable that should be disabled for "Has web view" to work and when I save article doctype begin to show in doctype folder
+
 ---
 
 ## Doctype Features
 
-In the previous chapter, we created the Article doctype. Let's see what other features we can customize.
+Previously we created the Article doctype. Let's see what other features we can customize.
 
 ## Naming
 
