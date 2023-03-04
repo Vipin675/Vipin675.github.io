@@ -1,5 +1,20 @@
 # Library Management with Frappe Framework
 
+## PREREQUISTICS
+
+` https://frappe.school/courses/frappe-framework-tutorial/learn/2.1 `
+
+- Python
+- MariaDB / Postgres
+- HTML / CSS
+- JavaScript / jQuery
+- Jinja Templating
+- Git / GitHub
+
+Install Frappe if you haven't
+
+` https://frappeframework.com/docs/user/en/installation `
+
 ## Creating frappe-bench directory
 
 Let's create our project folder which will contain our apps and sites. Run the following command:
