@@ -130,6 +130,9 @@ osmnx_env                /home/vipin/miniconda3/envs/osmnx_env
 
 (base) vipin@tulip:~$ conda activate osmnx_env
 (osmnx_env) vipin@tulip:~$ 
+(osmnx_env) vipin@tulip:~$ python -c "import osmnx; print(osmnx.__version__)"
+1.3.0
+(osmnx_env) vipin@tulip:~$ 
 ```
 
 If you want other packages, such as `jupyterlab`, installed in this environment as well, just add their names after `osmnx` above. See the conda documentation for further details. To upgrade OSMnx to a newer release, remove the conda environment you created and then create a new one again, as above. Don’t just run “conda update” or you could get package conflicts.
