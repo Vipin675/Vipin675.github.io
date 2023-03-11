@@ -36,6 +36,24 @@ reference: https://docs.conda.io/projects/conda/en/stable/user-guide/install/lin
 
     - Linux: In a terminal window enter `sha256sum filename`.
 
+        this will display SHA-256 hash value of your downloaded installer file
+
+        example:
+
+        ```bash
+        (base) vipin@tulip:~$ sha256sum Downloads/Miniconda3-py310_23.1.0-1-Linux-x86_64.sh 
+        32d73e1bc33fda089d7cd9ef4c1be542616bd8e437d1f77afeeaf7afdb019787  Downloads/Miniconda3-py310_23.1.0-1-Linux-x86_64.sh
+        (base) vipin@tulip:~$ 
+        ```
+
+        here `32d73e1bc33fda089d7cd9ef4c1be542616bd8e437d1f77afeeaf7afdb019787` is SHA-256 hash value.
+
+        compare it with SHA256 hash from where you downloaded it
+        `https://docs.conda.io/en/latest/miniconda.html#linux-installers`
+        ![sha256sum](./assets/assets.png)
+
+        if same you're good to go
+
 3. In your terminal window, run:
 
     ```bash
