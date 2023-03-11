@@ -20,9 +20,7 @@ Boeing, G. 2017. OSMnx: New Methods for Acquiring, Constructing, Analyzing, and 
 
 ## INSTALLATION
 
-```link
-reference: https://osmnx.readthedocs.io/en/stable/#
-```
+**Reference:** `https://osmnx.readthedocs.io/en/stable/#`
 
 Installing OSMnx with [conda](https://docs.conda.io/en/latest/).
 
@@ -32,9 +30,12 @@ Installing OSMnx with [conda](https://docs.conda.io/en/latest/).
 reference: https://docs.conda.io/projects/conda/en/stable/user-guide/install/linux.html#install-linux-silent
 ```
 
-1. Download Miniconda wrt python version.
+1. Download [Miniconda](https://docs.conda.io/en/latest/miniconda.html#linux-installers) wrt python version.
+
 2. Verify your installer hashes
+
     - Linux: In a terminal window enter `sha256sum filename`.
+
 3. In your terminal window, run:
 
     ```bash
@@ -43,6 +44,7 @@ reference: https://docs.conda.io/projects/conda/en/stable/user-guide/install/lin
 
 4. Follow the prompts on the installer screens.
     - If you are unsure about any setting, accept the defaults. You can change them later.
+
 5. To make the changes take effect, close and then re-open your terminal window.
 
 6. Now run `echo $PATH` to verify Conda is in you PATH, if not follow the following step:
@@ -50,7 +52,7 @@ reference: https://docs.conda.io/projects/conda/en/stable/user-guide/install/lin
 
     - Type the following command to open the .bashrc file:
 
-        nano ~/.bashrc
+        `nano ~/.bashrc`
 
     - Add the following line at the end of the file:
 
@@ -77,6 +79,12 @@ reference: https://docs.conda.io/projects/conda/en/stable/user-guide/install/lin
     That's it! Conda is now added to your PATH environment variable and can be accessed from anywhere in the terminal.
 
 7. Test your installation. In your terminal window or Anaconda Prompt, run the command `conda list`. A list of installed packages appears if it has been installed correctly.
+or check version by running followin commands
+
+    ```bash
+    vipin@tulip:~$ conda --version
+    conda 23.1.0
+    ```
 
 ## Continue OSMnx Installation
 
@@ -91,6 +99,19 @@ now **restart** the terminal and activate `osmnx_env` environment
 
 ```bash
 conda activate osmnx_env 
+```
+
+example
+
+```bash
+(base) vipin@tulip:~$ conda env list
+# conda environments:
+#
+base                  *  /home/vipin/miniconda3
+osmnx_env                /home/vipin/miniconda3/envs/osmnx_env
+
+(base) vipin@tulip:~$ conda activate osmnx_env
+(osmnx_env) vipin@tulip:~$ 
 ```
 
 If you want other packages, such as `jupyterlab`, installed in this environment as well, just add their names after `osmnx` above. See the conda documentation for further details. To upgrade OSMnx to a newer release, remove the conda environment you created and then create a new one again, as above. Don’t just run “conda update” or you could get package conflicts.
