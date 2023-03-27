@@ -2,9 +2,6 @@
 
 ## Adding functionality
 
----
----
-
 Caddyfile - `/etc/caddy/Caddyfile`
 
 ```text
@@ -14,7 +11,6 @@ file_server browse
 ```
 
 ## Using **Templates**
----
 
 Create a new file for example `caddy.html` in current directory
 
@@ -54,8 +50,6 @@ Page loaded at: Mon Mar 27 21:38:02 IST 2023
 ```
 
 ## Compression
-
----
 
 In Caddy, compressing responses refers to the process of compressing the content of HTTP responses before sending them over the network. This can help reduce the size of the response, which can improve the performance of your web application by reducing the amount of data that needs to be transferred over the network.
 
