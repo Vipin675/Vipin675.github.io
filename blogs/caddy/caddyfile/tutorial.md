@@ -23,7 +23,7 @@ Add the following:
 		<title>Caddy tutorial</title>
 	</head>
 	<body>
-		Page loaded at: {{now | date "Mon Jan 2 15:04:05 MST 2006"}}
+		Page loaded at: \{\{now | date "Mon Jan 2 15:04:05 MST 2006"\}\}
 	</body>
 </html>
 ```
